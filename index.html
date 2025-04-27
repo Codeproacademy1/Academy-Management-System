@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academy Management System</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Programming Academy Management</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Dashboard</a></li>
+                <li><a href="students.html">Students</a></li>
+                <li><a href="instructors.html">Instructors</a></li>
+                <li><a href="callcenter.html">Call Center</a></li>
+                <li><a href="performance.html">Performance</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="dashboard-grid">
+            <div class="card summary">
+                <h2>At a Glance</h2>
+                <div class="stats">
+                    <div>
+                        <h3>Total Students</h3>
+                        <p id="total-students">31</p>
+                    </div>
+                    <div>
+                        <h3>Active Courses</h3>
+                        <p>3</p>
+                    </div>
+                    <div>
+                        <h3>Instructors</h3>
+                        <p>3</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card student-distribution">
+                <h2>Student Distribution</h2>
+                <canvas id="studentChart"></canvas>
+            </div>
+
+            <div class="card upcoming-events">
+                <h2>Upcoming Sessions</h2>
+                <ul id="upcoming-sessions">
+                    <!-- Filled by JavaScript -->
+                </ul>
+            </div>
+
+            <div class="card financials">
+                <h2>This Month</h2>
+                <div class="stats">
+                    <div>
+                        <h3>Instructor Salaries</h3>
+                        <p id="total-salaries">$0</p>
+                    </div>
+                    <div>
+                        <h3>Revenue</h3>
+                        <p id="total-revenue">$0</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2023 Programming Academy. Owners: [Your Name]</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/charts.js"></script>
+</body>
+</html>

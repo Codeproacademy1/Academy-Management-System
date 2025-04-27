@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Student Management</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="students.html" class="active">Students</a></li>
+                <li><a href="instructors.html">Instructors</a></li>
+                <li><a href="callcenter.html">Call Center</a></li>
+                <li><a href="performance.html">Performance</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="student-controls">
+            <button id="add-student" class="btn-primary">Add New Student</button>
+            <div class="filters">
+                <select id="course-filter">
+                    <option value="all">All Courses</option>
+                    <option value="junior">Junior (6-8)</option>
+                    <option value="senior">Senior (8-11)</option>
+                    <option value="advanced">Advanced (12-18)</option>
+                </select>
+                <select id="location-filter">
+                    <option value="all">All Locations</option>
+                    <option value="online">Online</option>
+                    <option value="office_1">Office 1</option>
+                    <option value="office_2">Office 2</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="student-list">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Course</th>
+                        <th>Location</th>
+                        <th>Join Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="student-table-body">
+                    <!-- Filled by JavaScript -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Add Student Modal -->
+        <div id="student-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Add/Edit Student</h2>
+                <form id="student-form">
+                    <input type="hidden" id="student-id">
+                    <div class="form-group">
+                        <label for="student-name">Full Name</label>
+                        <input type="text" id="student-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="student-age">Age</label>
+                        <input type="number" id="student-age" min="6" max="18" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="student-course">Course</label>
+                        <select id="student-course" required>
+                            <option value="junior">Junior (6-8)</option>
+                            <option value="senior">Senior (8-11)</option>
+                            <option value="advanced">Advanced (12-18)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="student-location">Location</label>
+                        <select id="student-location" required>
+                            <option value="online">Online</option>
+                            <option value="office_1">Office 1</option>
+                            <option value="office_2">Office 2</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="student-phone">Phone</label>
+                        <input type="tel" id="student-phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="student-email">Email</label>
+                        <input type="email" id="student-email">
+                    </div>
+                    <button type="submit" class="btn-primary">Save</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+    <script src="js/students.js"></script>
+</body>
+</html>
